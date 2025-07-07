@@ -55,11 +55,12 @@ function startLevel() {
     for (let i = 0; i < total; i++) {
         const btn = document.createElement('button');
         btn.className = 'color-btn';
+        btn.type = 'button'; // 기본 버튼 타입 명시
         btn.style.background = i === answerIdx ? getSimilarColor(baseColor) : baseColor;
         btn.onclick = () => handleClick(i);
         // 64칸(8x8)일 때만 네모 아이콘 표시
         if (size === 8 && i === answerIdx) {
-            btn.innerHTML = '<svg width="60%" height="60%" viewBox="0 0 32 32"><rect x="4" y="4" width="24" height="24" rx="4" fill="#fff" fill-opacity="0.7" stroke="#43c6ac" stroke-width="2"/></svg>';
+            btn.innerHTML = '<svg width="60%" height="60%" viewBox="0 0 32 32" style="display:block;"><rect x="4" y="4" width="24" height="24" rx="4" fill="#fff" fill-opacity="0.7" stroke="#43c6ac" stroke-width="2"/></svg>';
         }
         gameBoard.appendChild(btn);
     }

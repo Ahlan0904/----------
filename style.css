@@ -65,6 +65,8 @@ h1 {
 }
 
 .color-btn {
+    appearance: none;
+    -webkit-appearance: none;
     width: 100%;
     aspect-ratio: 1/1;
     min-height: 0;
